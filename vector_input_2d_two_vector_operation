@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+    vector<vector<int>> v;
+    int n, col, a;
+    cin>>n;
+    // taking input into 2D vector from user
+    for(int i=0 ; i<n ; i++) {
+         cin>>col;
+         vector<int> p;
+         for(int j=0 ; j<col ; j++) {
+              cin>>a;
+              p.push_back(a);
+         }
+         v.push_back(p);
+    }
+    for(auto q: v) {
+        for(auto it: q) {
+         } 
+         cout<<endl;
+        if(accumulate(q.begin(), q.end(), 0)%2==0)
+         cout<<"1\n";
+         
+         else
+         cout<<"2\n";
+     }
+
+      return 0;
+  }
