@@ -1,0 +1,48 @@
+#include <bits/stdc++.h>
+#include<string.h>
+using namespace std;
+int main() {
+  int t;
+  cin>>t;
+  while(t--){
+    int cut=0,cpt=0,cnt=0,ctu=0,cns1=0,cns2=0;
+    string s1;
+    string s2;
+    cin>>s1;
+    cin>>s2;
+    for(int i=0;i<s1.length();i++){
+if (s1[i]=='?' && s2[i]!='?'  || s1[i]!='?' && s2[i]=='?'){
+    cnt++;
+}
+
+if (s1[i]!='?' && s2[i]!='?'){
+    cpt++;
+}
+
+if (s1[i]=='?' && s2[i]=='?' ){
+    ctu++;
+}
+
+if (s1[i]=='a' && s2[i]=='a'  || s1[i]=='b' && s2[i]=='b'  || s1[i]=='c' && s2[i]=='c'  || s1[i]=='d' && s2[i]=='d' ){
+    cut++;
+}
+ 
+        
+    }
+    int res = s1.compare(s2);
+	 if(res==0){
+	     cout<<"0"<<" "<<ctu<<endl;}
+	     else{
+    
+    int sum=cpt+cnt+ctu;
+    if (cut!=0 ){
+      sum=sum-cut;
+    }
+    
+
+ cout<<cpt<<" "<<sum<<endl;
+	     }
+    }
+  
+  return 0;
+}
