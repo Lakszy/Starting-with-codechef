@@ -1,0 +1,26 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+int t;
+cin>>t;
+while(t--){
+    int n,cnt=0,cpt=0;
+    cin>>n;
+ 
+    string s;   cin>>s;
+    for(int i=0;i<s.length();i++){
+        if(s[i]=='1')
+        cnt++;
+        
+        else
+        cpt++;
+    }
+    if(cnt==cpt){
+        cout<<cnt+cpt<<endl;
+    }
+    else
+    cout<<2*min(cpt,cnt)+1<<endl;
+}
+	return 0;
+}
