@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t;
+	cin >>t;
+	while(t--){
+	    int a;
+	    cin >> a;
+	    int b;
+	    cin >> b;
+	    int X;
+	    cin >> X;
+	    if (a>b){
+	        int temp = a;
+	        a= b;
+	        b= temp;
+	        }
+	    int c = b - a;
+	    int d = 2*X;
+	    if(c % d == 0){
+	        cout << "YES" << endl;
+	    }
+	    else{
+	        cout << "NO" << endl;
+	    }
+	    
+	}
+	return 0;
+}
