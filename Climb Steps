@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+//memorization
 
 int cs(int n,int qb[]){
      if(n==0){
@@ -24,8 +25,36 @@ int q=x+y+z;
   
 }
 
+// tabulation
+int tb(int n){
+    int arr[n+1];
+    arr[0]=1;
+    
+    for(int i=1;i<=n;i++){
+        
+    if(i==1){
+     arr[i]=arr[i-1];
+    }
+    
+    else if (i==2){
+    arr[i]=arr[i-1]+arr[i-2];
+    }
+    
+      else{
+      arr[i]=arr[i-1]+arr[i-2]+arr[i-3];
+       
+    }
+  }
+  return arr[n];
+}
+
+
+
+
+
 int main(){
     int n;
     cin>>n;
     cout<<cs(n,new int [n+1])<<endl;
+    cout<<tb(n)<<endl;
 }
